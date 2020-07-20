@@ -56,24 +56,14 @@ export class AppComponent implements OnInit {
     private statusBar: StatusBar
   ) {
     this.initializeApp();
-    const prefersColor = window.matchMedia('(prefers-color-scheme: dark)');
-    this.dark = prefersColor.matches;
-    this.updateDarkMode();
-
-    prefersColor.addEventListener(
-      'change',
-      mediaQuery => {
-        this.dark = mediaQuery.matches;
-        this.updateDarkMode();
-      }
-    );
+    
+    
   }
-  updateDarkMode() {
-    document.body.classList.toggle('dark', this.dark);
-  }
+  
   initializeApp() {
     this.platform.ready().then(() => {
-      
+      this.statusBar.styleDefault();
+      this.splashScreen.hide();
     });
   }
 

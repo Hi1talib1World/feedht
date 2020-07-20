@@ -1,5 +1,7 @@
 {
   "name": "feedht",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
