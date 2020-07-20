@@ -1,4 +1,5 @@
 <ion-header [translucent]="true">
+  
   <ion-toolbar>
     <ion-buttons *ngIf="!showSearchbar" slot="start">
     </ion-buttons>
@@ -18,6 +19,7 @@
       </ion-button>
       <ion-button *ngIf="!showSearchbar" (click)="presentFilter()">
         <span *ngIf="ios">Filter</span>
+        
         <span *ngIf="!ios">
           <ion-icon slot="icon-only" name="options"></ion-icon>
         </span>
@@ -28,6 +30,7 @@
     </ion-buttons>
 
   </ion-toolbar>
+    
 </ion-header>
 
 <ion-content [fullscreen]="true">
