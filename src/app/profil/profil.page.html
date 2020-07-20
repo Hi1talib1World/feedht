@@ -1,9 +1,113 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>profil</ion-title>
-  </ion-toolbar>
-</ion-header>
 
+<ion-header>
+  <ion-navbar color="cos" >
+    <ion-title>
+     profile
+    </ion-title>
+     <ion-buttons end>
+       <button ion-button *ngIf="ifmodi" style="font-size:22px" (click)="modify()">
+         <ion-icon name="create"></ion-icon>
+    
+       </button>
+     </ion-buttons>
+  </ion-navbar>
+  
+</ion-header>
 <ion-content>
+
+
+<ion-content class="home">
+  
+        
+  
+  <div class="list">
+        <form [formGroup]="todo" >
+        <div class="top">
+         <br>
+          <div class="profile-picture big-profile-picture" >
+            <img [src]="(data | async)?.pic" id="img" />
+             
+          
+          </div>
+           
+            <button   *ngIf="modi" ion-button icon-left (click)="presentActionSheet()">
+         <ion-icon name="camera"></ion-icon>upload avatar
+    
+       </button>
+         
+       
+        
+           <div class="profile-name" *ngIf="gene">
+          <p style="color:white">Nick Name： {{(data | async)?.name}}</p>
+             <p style="color:white">sex：{{(data | async)?.sex}}</p>  
+             <p style="color:white">campus：{{(data | async)?.camp}}</p>  
+             <p style="color:white">program：{{(data | async)?.pro}}</p>  
+             <span *ngIf="male1">  <ion-icon  class="male" name="male" item-left primary></ion-icon></span>
+           <span *ngIf="female1"> <ion-icon  class="female" name="female" item-left primary></ion-icon>  </span>
+       
+
+          </div>
+             </div>
+
+
+           <ion-item *ngIf="modi">
+            
+         
+          <ion-input type="text" placeholder="change your name" [(ngModel)]="todo.name" formControlName="name" ></ion-input><br>
+          </ion-item>
+
+
+           <ion-item *ngIf="modi">
+          
+  <ion-label>sex</ion-label>
+  
+  <ion-select formControlName="sex" >
+    <ion-option value="男">male</ion-option>
+    <ion-option value="女">female</ion-option>
+  </ion-select>
+</ion-item>
+
+
+   <ion-item *ngIf="modi">
+          
+  <ion-label>campus</ion-label>
+  
+  <ion-select formControlName="camp" >
+    <ion-option value="Trafagal">Trafagal</ion-option>
+    <ion-option value="HMC">HMC</ion-option>
+     <ion-option value="Davis">Davis</ion-option>
+  </ion-select>
+</ion-item>
+            
+          <br>
+           <div class="one">
+          <div class="profile-info" *ngIf= "gene" >status: {{(data | async)?.status}}</div>
+           
+         <ion-item  *ngIf="modi">
+             
+          <ion-input formControlName="status"  placeholder="change your status" type="text"></ion-input>
+          <br>
+         
+        
+          </ion-item>
+           <br>
+         
+              <ion-item  *ngIf="modi">
+              <ion-input formControlName="pro"  placeholder="write your program" type="text"></ion-input> 
+           <br>
+             </ion-item>
+ </div>
+        </form>
+            
+           
+           <button *ngIf="modi" ion-button (click)="confirm()">comfirm</button>
+           <button *ngIf="modi" ion-button  (click)="reset()">give up</button>
+              <button ion-button *ngIf= "hidebutton" block icon-left ><ion-icon name="message"></ion-icon>message</button>
+           <br>
+              <button  ion-button *ngIf= "hidebutton"  block icon-left ><ion-icon name="cancel"></ion-icon>block</button>
+              <br>
+              <button  ion-button *ngIf= "gene"  icon-left block (click)="logout()" ><ion-icon name="logout"></ion-icon>log out</button>
+      </div>
+      
 
 </ion-content>
