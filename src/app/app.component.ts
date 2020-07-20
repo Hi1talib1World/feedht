@@ -43,7 +43,7 @@ export class AppComponent implements OnInit {
       icon: 'trash'
     },
     {
-      title: 'Spam',
+      title: 'About',
       url: '/folder/Spam',
       icon: 'warning'
     }
