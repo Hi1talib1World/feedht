@@ -10,6 +10,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
   styleUrls: ['app.component.scss']
 })
 export class AppComponent implements OnInit {
+  dark = false;
   public selectedIndex = 0;
   public appPages = [
     {
@@ -55,14 +56,29 @@ export class AppComponent implements OnInit {
     private statusBar: StatusBar
   ) {
     this.initializeApp();
-  }
+    const prefersColor = window.matchMedia('(prefers-color-scheme: dark)');
+    this.dark = prefersColor.matches;
+    this.updateDarkMode();
 
+    prefersColor.addEventListener(
+      'change',
+      mediaQuery => {
+        this.dark = mediaQuery.matches;
+        this.updateDarkMode();
+      }
+    );
+  }
+  updateDarkMode() {
+    document.body.classList.toggle('dark', this.dark);
+  }
   initializeApp() {
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
     });
   }
+
+  
 
   ngOnInit() {
     const path = window.location.pathname.split('folder/')[1];
