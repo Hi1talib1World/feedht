@@ -23,7 +23,14 @@ female1:boolean;
 stat:any;
 gene:boolean;
 
-  constructor() { }
+  constructor(public navCtrl: NavController, public zone: NgZone,public db: AngularFireOfflineDatabase,public toastCtrl: ToastController,public platform: Platform, public actionSheetCtrl: ActionSheetController,private camera: Camera, private transfer: Transfer, private file: File, private filePath:FilePath,public auth:Auth,public pro:Profile,public navParams: NavParams, public formBuilder: FormBuilder,public alertCtrl: AlertController, public loadingCtrl: LoadingController) {
+    this.modi=false;
+    this.hidebutton=false;
+    this.gene=true;
+    this.male1=false;
+    this.female1=false;
+    this.ifmodi = true;
+   }
 
   ngOnInit() {
   }
