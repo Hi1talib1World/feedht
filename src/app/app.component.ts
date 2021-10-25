@@ -14,22 +14,22 @@ export class AppComponent implements OnInit {
   public selectedIndex = 0;
   public appPages = [
     {
-      title: 'Main',
+      title: 'FEED',
       url: '/folder',
       icon: 'home'
     },
     {
-      title: 'Statistiques',
+      title: 'Videos',
       url: '/folder/Inbox',
       icon: 'time'
     },
     {
-      title: 'Outbox',
+      title: 'Messages',
       url: '/folder/Outbox',
       icon: 'paper-plane'
     },
     {
-      title: 'Favorites',
+      title: 'Profile Settings',
       url: '/folder/Favorites',
       icon: 'heart'
     },
@@ -39,7 +39,7 @@ export class AppComponent implements OnInit {
       icon: 'archive'
     },
     {
-      title: 'Trash',
+      title: 'Groups',
       url: '/folder/Trash',
       icon: 'trash'
     },
