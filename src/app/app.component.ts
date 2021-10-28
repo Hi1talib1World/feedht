@@ -9,28 +9,39 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.scss']
 })
+
 export class AppComponent implements OnInit {
+
+  toggleTheme(event){
+    if(event.detail.checked){
+      document.body.setAttribute('color-theme','dark')
+    }
+    
+  }
+
+  
+
   dark = false;
   public selectedIndex = 0;
   public appPages = [
     {
       title: 'FEED',
-      url: '/folder',
+      url: '/feed',
       icon: 'home'
     },
     {
       title: 'Videos',
-      url: '/folder/Inbox',
+      url: '/videos',
       icon: 'time'
     },
     {
       title: 'Messages',
-      url: '/folder/Outbox',
+      url: '/messages',
       icon: 'paper-plane'
     },
     {
       title: 'Profile Settings',
-      url: '/folder/Favorites',
+      url: '/profile',
       icon: 'heart'
     },
     {
@@ -40,7 +51,7 @@ export class AppComponent implements OnInit {
     },
     {
       title: 'Groups',
-      url: '/folder/Trash',
+      url: '/folder/Groups',
       icon: 'trash'
     },
     {
@@ -68,7 +79,7 @@ export class AppComponent implements OnInit {
     });
   }
 
-  
+
 
   ngOnInit() {
     const path = window.location.pathname.split('folder/')[1];
