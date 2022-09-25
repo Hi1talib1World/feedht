@@ -8,6 +8,10 @@ import { MessagesPageRoutingModule } from './messages-routing.module';
 
 import { MessagesPage } from './messages.page';
 
+// Sub components
+import { GroupComponent } from './components/group/group.component';
+import { MessageComponent } from './components/message/message.component';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -15,6 +19,10 @@ import { MessagesPage } from './messages.page';
     IonicModule,
     MessagesPageRoutingModule
   ],
-  declarations: [MessagesPage]
+  declarations: [
+    MessagesPage,
+    GroupComponent,
+    MessageComponent
+  ]
 })
-export class MessagesPageModule {}
+export class InboxPageModule {}
