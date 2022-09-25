@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-inbox',
-  templateUrl: './inbox.page.html',
-  styleUrls: ['./inbox.page.scss'],
+  templateUrl: './messages.page.html',
+  styleUrls: ['./messages.page.scss'],
 })
 export class MessagesPage implements OnInit {
 
