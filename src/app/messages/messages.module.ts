@@ -25,4 +25,4 @@ import { MessageComponent } from './components/message/message.component';
     MessageComponent
   ]
 })
-export class InboxPageModule {}
+export class MessagesPageModule {}
