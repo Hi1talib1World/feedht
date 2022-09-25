@@ -25,7 +25,7 @@ const routes: Routes = [
   },
   {
     path: 'archived',
-    loadChildren: () => import('./archived/friends.module').then(m => m.ArchivedPageModule)
+    loadChildren: () => import('./archived/friends.module').then(m => m.FriendsPageModule)
   },
   {
     path: 'about',
