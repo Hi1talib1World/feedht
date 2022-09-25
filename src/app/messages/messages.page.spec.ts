@@ -1,9 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import {MessagesPage, MessagesPage} from './messages.page';
+import { MessagesPage } from './messages.page';
 
-describe('InboxPage', () => {
+describe('MessagesPage', () => {
   let component: MessagesPage;
   let fixture: ComponentFixture<MessagesPage>;
 
