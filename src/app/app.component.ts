@@ -25,7 +25,7 @@ export class AppComponent implements OnInit {
   public selectedIndex = 0;
   public appPages = [
     {
-      title: 'FEED',
+      title: 'Feed',
       url: '/feed',
       icon: 'home'
     },
@@ -46,8 +46,8 @@ export class AppComponent implements OnInit {
     },
     {
       title: 'Friends',
-      url: '/folder/Archived',
-      icon: 'archive'
+      url: '/friends',
+      icon: 'friend'
     },
     {
       title: 'Groups',
