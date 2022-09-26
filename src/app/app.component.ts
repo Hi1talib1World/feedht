@@ -55,9 +55,9 @@ export class AppComponent implements OnInit {
       icon: 'trash'
     },
     {
-      title: 'About',
-      url: '/about',
-      icon: 'About'
+      title: 'Notification',
+      url: '/notification',
+      icon: 'Notification'
     }
   ];
 
