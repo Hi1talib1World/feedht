@@ -28,8 +28,8 @@ const routes: Routes = [
     loadChildren: () => import('./friends/friends.module').then(m => m.FriendsPageModule)
   },
   {
-    path: 'about',
-    loadChildren: () => import('./about/about.module').then( m => m.AboutPageModule)
+    path: 'notificatio',
+    loadChildren: () => import('./notification/notification.module').then( m => m.NotificatioPageModule)
   },
   {
     path: 'login',
