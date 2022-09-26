@@ -40,12 +40,12 @@ export class AppComponent implements OnInit {
       icon: 'paper-plane'
     },
     {
-      title: 'Profile Settings',
+      title: 'Profile',
       url: '/profile',
       icon: 'heart'
     },
     {
-      title: 'Archived',
+      title: 'Friends',
       url: '/folder/Archived',
       icon: 'archive'
     },
